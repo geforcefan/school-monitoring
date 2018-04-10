@@ -1,0 +1,37 @@
+{
+  "client": {
+    "port": 8080,
+    "host": "0.0.0.0"
+  },
+  "server": {
+    "port": 3000,
+    "host": "0.0.0.0"
+  },
+  "apacheDirCrawler": {
+    "url": "http://www.fosbos-aschaffenburg.de/fosbos/Infosystem/",
+    "auth": {
+      "username": "",
+      "password": ""
+    },
+    "targetDir": "school-monitoring/"
+  },
+  "directoryMerger": {
+    "destinationDir": "files/"
+  },
+  "scheduler": {
+    "doEverythingInterval": 60
+  },
+
+  "substitutionSchedule": {
+    "directory": "Vertretungsplan",
+    "shuffleDuration": 5
+  },
+  "filesBoxTop": {
+    "directory": "Aktuelles",
+    "shuffleDuration": 7
+  },
+  "filesBoxBottom": {
+    "directory": "Info",
+    "shuffleDuration": 10
+  }
+}
