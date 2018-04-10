@@ -10,7 +10,7 @@ class Server {
     application = null;
 
     constructor() {
-        //initScheduler();
+        initScheduler();
 
         this.initServer();
         this.initRoutes();

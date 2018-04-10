@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["env", { "modules": false }],
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-export-extensions",
+    "transform-react-handled-props"
+  ]
+}
