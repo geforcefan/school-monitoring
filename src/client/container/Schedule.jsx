@@ -6,6 +6,8 @@ import { provideAutoScroller } from '../provider/AutoScroller';
 
 import ScheduleTable from '../components/ScheduleTable';
 
+import config from '../../../config.json';
+
 class Schedule extends React.Component {
     constructor(props) {
         super(props);
@@ -15,7 +17,7 @@ class Schedule extends React.Component {
             error: false
         };
 
-        fetch("http://localhost:8080/api/schedule/data")
+        fetch(`http://${config.server.host}:${config.server.port}/api/schedule/data`)
             .then(res => res.json())
             .then(data => {
                 this.setState({

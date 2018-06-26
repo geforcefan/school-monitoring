@@ -8,7 +8,7 @@
   "scripts": {
     "server:dev": "nodemon -w src/server --exec \"yarn server:start\"",
     "server:start": "babel-node src/server/server.js --presets es2015,stage-0",
-    "client:dev": "NODE_ENV=development webpack-dev-server"
+    "client:dev": "NODE_ENV=development webpack-dev-server --port 9090"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -7,6 +7,8 @@ import { provideShuffle } from '../provider/Shuffler';
 
 import PublicFile from '../components/PublicFile';
 
+import config from '../../../config.json';
+
 const multiIncludes = (str, collection) => !!collection.map(item => str.includes(item)).filter(item => item).length;
 
 class Files extends React.Component {
@@ -22,7 +24,7 @@ class Files extends React.Component {
             error: false
         };
 
-        fetch(`http://localhost:8080/api/files/${this.props.directory}`)
+        fetch(`http://${config.server.host}:${config.server.port}/api/files/${this.props.directory}`)
             .then(res => res.json())
             .then(files => files.filter(file => multiIncludes(file.toLowerCase(), ['jpg', 'jpeg', 'png'])))
             .then(files => {
