@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './Client.less';
+import './client.less';
 
 import Dashboard from './components/Dashboard';
 
