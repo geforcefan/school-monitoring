@@ -17,7 +17,7 @@ class Schedule extends React.Component {
             error: false
         };
 
-        fetch(`http://${config.server.host}:${config.server.port}/api/schedule/data`)
+        fetch(`http://${config.client.host}:${config.client.port}/api/schedule/data`)
             .then(res => res.json())
             .then(data => {
                 this.setState({

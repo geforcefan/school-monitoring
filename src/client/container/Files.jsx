@@ -24,7 +24,7 @@ class Files extends React.Component {
             error: false
         };
 
-        fetch(`http://${config.server.host}:${config.server.port}/api/files/${this.props.directory}`)
+        fetch(`http://${config.client.host}:${config.client.port}/api/files/${this.props.directory}`)
             .then(res => res.json())
             .then(files => files.filter(file => multiIncludes(file.toLowerCase(), ['jpg', 'jpeg', 'png'])))
             .then(files => {
